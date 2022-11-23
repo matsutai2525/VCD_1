@@ -14,10 +14,13 @@
 			
 }
 		main{
-			padding-top: 50px;
+			padding-top: 30px;
 			padding-right:  80px;
 			padding-left:  80px;
 			padding-bottom: 100px;
+		}
+		script{
+			padding-top: 100px;
 		}
 		video{
 			width: 100%;
@@ -115,11 +118,36 @@ h1 {
 			background-size: 200px 70px;
 			padding:0px 0px 0px 0px;
 		}
+		slider{
+			width: 50%;
+		}
+		
 	</style>
 </head>
+	
 <body>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+	
+	<script type="text/javascript">
+	var now, hour, minute;;
+	now = new Date();
+	hour = now.getHours();
+	minute = now.getMinutes();
+	document.write("<h4>ページに訪れた時間：");
+	document.write(hour,"時", minute, "分</h1>");
+		
+		 $(document).ready(function(){
+            $('.slider').bxSlider({
+                auto: true,
+                pause: 10000,
+            });
+        });
+</script>
 <div class = "all">
 	<header id="header">
+		
   <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
 	<h1>イタリアン　シーアイティ</h1>
 		
@@ -128,19 +156,17 @@ h1 {
    <li><a href="index.html">HOME</a></li>
    <li><a href="ItaCITmenu.html">メニュー</a></li>
    <li><a href="ItaCITosi.html">お知らせ</a></li>
-  
-   <li><a href="#">お問い合わせ</a>
-      <ul>
-         <li><a href="ItaCITsitu.html">よくあるご質問</a></li>
-         <li><a href="ItaCITsaki.html">お問い合わせ先</a></li>
-      </ul>
-   </li>
+   <li><a href="ItaCITsitu.html">よくあるご質問</a></li>
+   <li><a href="ItaCITsaki.html">お問い合わせ先</a></li>
 </ul>
 </div>
 	</header>
 	
 <p class="mainpic">
+	<div class="slider">
 	<video src="https://github.com/matsutai2525/VCD_1/blob/main/siyou/%E3%83%91%E3%82%B9%E3%82%BF.mp4?raw=true" width="800" height="450" loop autoplay muted> </video>
+		<video src="https://github.com/matsutai2525/VCD_1/blob/main/%E3%83%AF%E3%82%A4%E3%83%B3.mp4?raw=true" width="800" height="450" loop autoplay muted> </video>
+	</div>
 	</p>
 	
 <main class="main"> 
